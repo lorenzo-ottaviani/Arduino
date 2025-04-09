@@ -2,9 +2,9 @@
 * Auteur : Lorenzo OTTAVIANI.
 * Date : 09/04/2025 17h38
 * But du programme :
-*    Faire varier la LED de manière asynchrone toute les secondes.
+*    Allumer progressivement une LED.
 * Entrée : ∅
-* Sortie : Le LED clignotent de manière asynchrone sur le circuit connecté à l'ARDUINO UNO.
+* Sortie : Le LED s'allume progressivement sur le circuit connecté à l'ARDUINO UNO.
 */
 
 const int led_rouge = 3;

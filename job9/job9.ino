@@ -7,14 +7,14 @@
 * Sortie : Le LED effectue l'action comandé par le bouton sur le circuit connecté à l'ARDUINO UNO.
 */
 
-const int led_rouge = 3;  // ledPin
-const int bouton = 2; // buttonPin
-int etat_bouton = 0;  // buttonState
-int dernier_etat = 0;  // lastButtonState
-int nb_click = 0;  // pressCount
-unsigned long temps_click = 0;  // buttonPressTime
-bool click_long = false;  // longPress
-bool led_on = false;  // ledState
+const int led_rouge = 3;
+const int bouton = 2;
+int etat_bouton = 0;
+int dernier_etat = 0;
+int nb_click = 0;
+unsigned long temps_click = 0;
+bool click_long = false;
+bool led_on = false;
 
 
 void setup()

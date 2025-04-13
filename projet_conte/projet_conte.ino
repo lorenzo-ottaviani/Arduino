@@ -11,9 +11,15 @@
 
 LiquidCrystal lcd_1(12, 11, 5, 4, 3, 2);
 int racconter = 1;
+int led_rouge = 8;
+int led_jaune = 9;
+int led_verte = 10;
 
 void setup()
 {
+  pinMode(led_rouge, OUTPUT);
+  pinMode(led_jaune, OUTPUT);
+  pinMode(led_verte, OUTPUT);
   lcd_1.begin(16, 2); // Nombre de lignes et de colonnes de l'écran LCD.
 }
 
@@ -39,11 +45,22 @@ void loop()
     lcd_1.print("trois    petits ");
     lcd_1.setCursor(0, 1);
     lcd_1.print("    cochons !   ");
-    delay(10000);  // Attendre 10s
+    delay(5000);  // Attendre 5s
   
   racconter = 0;
   } else {
     	lcd_1.noDisplay();  // L'écran s'éteint.
+    	
+    	// Boucle des lampes
+    	digitalWrite(led_verte, LOW);
+    	digitalWrite(led_rouge, HIGH);
+    	delay(1000);
+  		digitalWrite(led_rouge, LOW);
+    	digitalWrite(led_jaune, HIGH);
+    	delay(1000);
+    	digitalWrite(led_jaune, LOW);
+    	digitalWrite(led_verte, HIGH);
+    	delay(1000);
   }
   
 }
